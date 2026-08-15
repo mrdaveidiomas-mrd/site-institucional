@@ -17,6 +17,22 @@ async function injectPartial(targetId, url) {
   }
 }
 
+/* Botão flutuante de WhatsApp — presente em todas as páginas, menos no contato
+   (para não competir com o formulário de aula experimental). */
+async function injectWhatsApp() {
+  if (document.body.dataset.page === "contato") return;
+  try {
+    const res = await fetch("/partials/whatsapp.html", { cache: "no-cache" });
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+    const template = document.createElement("template");
+    template.innerHTML = (await res.text()).trim();
+    const fab = template.content.querySelector(".wa-fab");
+    if (fab) document.body.appendChild(fab);
+  } catch (err) {
+    console.error('Não foi possível carregar o botão de WhatsApp:', err);
+  }
+}
+
 /* Marca o item de menu correspondente à página atual */
 function setActiveNav() {
   const page = document.body.dataset.page; // definido em cada <body data-page="...">
@@ -83,6 +99,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await Promise.all([
     injectPartial("site-header", "/partials/header.html"),
     injectPartial("site-footer", "/partials/footer.html"),
+    injectWhatsApp(),
   ]);
 
   setActiveNav();

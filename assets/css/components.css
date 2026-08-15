@@ -607,7 +607,7 @@ body.menu-open {
 
 .footer__top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 2.5fr 1fr 1fr;
   gap: var(--space-7);
   padding-bottom: var(--space-7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -883,4 +883,96 @@ body.menu-open {
 
 .chip--yellow {
   background: var(--color-yellow-100);
+}
+
+/* ---- Botão flutuante de WhatsApp -------------------------------------- */
+.wa-fab {
+  position: fixed;
+  inset-inline-end: clamp(1rem, 0.4rem + 2vw, 2rem);
+  inset-block-end: clamp(1rem, 0.4rem + 2vw, 2rem);
+  z-index: var(--z-top);
+  display: inline-flex;
+  align-items: center;
+  block-size: 60px;
+  border-radius: var(--radius-pill);
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.42);
+  transition: transform var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    opacity var(--dur-base) var(--ease-out),
+    visibility var(--dur-base);
+}
+
+.wa-fab__icon {
+  display: grid;
+  place-items: center;
+  inline-size: 60px;
+  block-size: 60px;
+  flex: none;
+}
+
+.wa-fab__icon svg {
+  inline-size: 32px;
+  block-size: 32px;
+}
+
+.wa-fab__label {
+  max-inline-size: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  font-weight: var(--fw-semibold);
+  transition: max-inline-size var(--dur-base) var(--ease-out),
+    opacity var(--dur-base) var(--ease-out),
+    padding var(--dur-base) var(--ease-out);
+}
+
+.wa-fab:hover,
+.wa-fab:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(37, 211, 102, 0.5);
+}
+
+.wa-fab:hover .wa-fab__label,
+.wa-fab:focus-visible .wa-fab__label {
+  max-inline-size: 15rem;
+  opacity: 1;
+  padding-inline-end: 1.35rem;
+}
+
+/* Pulso sutil para chamar atenção sem distrair */
+.wa-fab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #25d366;
+  z-index: -1;
+  animation: wa-pulse 2.8s var(--ease-out) infinite;
+}
+
+@keyframes wa-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  70%,
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+/* Esconde o botão quando o menu móvel está aberto */
+body.menu-open .wa-fab {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-fab::before {
+    animation: none;
+  }
 }
