@@ -351,6 +351,27 @@ body.menu-open {
   border-color: var(--color-navy-100);
 }
 
+/* Cartão sobre fundo escuro (ex.: seção navy "Por que aprender") */
+.card--on-dark {
+  background: var(--color-navy-deep);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: none;
+}
+
+.card--on-dark .card__title,
+.card--on-dark .feature__title {
+  color: var(--color-white);
+}
+
+.card--on-dark .card__text {
+  color: var(--text-on-dark-soft);
+}
+
+.card--on-dark.card--hover:hover {
+  background: #0d2c50;
+  border-color: rgba(244, 196, 48, 0.45);
+}
+
 .card__title {
   color: var(--color-navy);
 }
@@ -360,15 +381,15 @@ body.menu-open {
   line-height: var(--lh-relaxed);
 }
 
-/* Ícone em "selo" */
+/* Ícone em "selo" — fundo azul marinho e ícone amarelo (padrão da marca) */
 .icon-badge {
   display: inline-grid;
   place-items: center;
   inline-size: 54px;
   block-size: 54px;
   border-radius: var(--radius-md);
-  background: var(--color-yellow-100);
-  color: var(--color-navy);
+  background: var(--color-navy);
+  color: var(--color-yellow);
   flex-shrink: 0;
 }
 
@@ -377,9 +398,18 @@ body.menu-open {
   block-size: 26px;
 }
 
+/* Alias mantido por compatibilidade — igual ao padrão */
 .icon-badge--navy {
   background: var(--color-navy);
   color: var(--color-yellow);
+}
+
+/* Variante para uso sobre superfícies escuras: ganha um anel amarelo
+   para o selo azul se destacar do fundo navy. */
+.icon-badge--on-dark {
+  background: var(--color-navy);
+  color: var(--color-yellow);
+  box-shadow: 0 0 0 1.5px rgba(244, 196, 48, 0.45);
 }
 
 /* Grades reutilizáveis */
