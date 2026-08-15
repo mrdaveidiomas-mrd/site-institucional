@@ -364,40 +364,32 @@
   margin-top: 2px;
 }
 
-/* ---- Cabeçalho de página interna (mini-hero) -------------------------- */
+/* ---- Cabeçalho de página interna ---------------------------------------
+   Faixa discreta (fundo claro), sem o tratamento de "hero" da home.
+   Objetivo: hierarquia clara — só a home tem hero de destaque. */
 .page-hero {
   position: relative;
-  background: var(--color-navy);
-  color: var(--text-on-dark);
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.page-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.6px);
-  background-size: 24px 24px;
-  z-index: -1;
-  mask-image: linear-gradient(to bottom, black, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  background: var(--color-surface-alt);
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-line);
 }
 
 .page-hero__inner {
-  padding-block: clamp(3rem, 2rem + 5vw, 6rem);
-  max-width: 52rem;
+  padding-block: clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
+  max-width: 60rem;
 }
 
 .page-hero h1 {
-  color: var(--color-white);
-  margin-block: var(--space-4) var(--space-5);
+  color: var(--text-heading);
+  font-size: var(--fs-2xl);
+  margin-block: var(--space-3) var(--space-4);
 }
 
 .page-hero__lead {
-  font-size: var(--fs-lg);
-  color: var(--text-on-dark-soft);
+  font-size: var(--fs-md);
+  color: var(--color-ink-soft);
   line-height: var(--lh-relaxed);
+  max-width: 62ch;
 }
 
 .breadcrumb {
@@ -405,15 +397,22 @@
   align-items: center;
   gap: var(--space-2);
   font-size: var(--fs-sm);
-  color: var(--text-on-dark-soft);
+  font-weight: var(--fw-medium);
+  color: var(--color-ink-faint);
+}
+
+.breadcrumb a {
+  color: var(--color-ink-soft);
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
 .breadcrumb a:hover {
-  color: var(--color-yellow);
+  color: var(--color-navy);
 }
 
 .breadcrumb span {
-  opacity: 0.5;
+  color: var(--color-ink-faint);
+  opacity: 0.7;
 }
 
 /* ---- Curso: cartão de idioma ------------------------------------------ */
