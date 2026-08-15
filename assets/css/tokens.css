@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Mr. Dave Idiomas — Design Tokens
+   Fonte única de verdade para cores, tipografia, espaçamento e afins.
+   Não use valores "hard-coded" nas demais folhas de estilo — use as variáveis.
+   ========================================================================== */
+
+:root {
+  /* ---- Cores da marca ---------------------------------------------------- */
+  --color-navy: #002365;        /* azul marinho — títulos, fundos destacados  */
+  --color-navy-deep: #0a2540;   /* azul escuro — rodapé, detalhes             */
+  --color-yellow: #f4c430;      /* amarelo — destaques, ícones                */
+  --color-white: #ffffff;       /* branco puro                                */
+  --color-black: #0d0d0d;       /* preto (texto principal)                    */
+
+  /* ---- Variações coerentes da paleta ------------------------------------- */
+  --color-navy-700: #032a72;
+  --color-navy-800: #001a4d;
+  --color-navy-050: #eef2fb;    /* tinta de fundo suave (azul lavado)         */
+  --color-navy-100: #dbe3f5;
+  --color-yellow-600: #d9a91f;  /* amarelo mais fechado (hover em ícones)     */
+  --color-yellow-100: #fdf3d3;  /* amarelo lavado (realces de fundo)          */
+
+  /* ---- Cores neutras ----------------------------------------------------- */
+  --color-ink: #131722;         /* texto padrão (preto suavizado p/ leitura)  */
+  --color-ink-soft: #47506b;    /* texto secundário / apoio                   */
+  --color-ink-faint: #8891a8;   /* legendas, placeholders                     */
+  --color-line: #e5e8f0;        /* bordas e divisórias                        */
+  --color-surface: #ffffff;     /* superfície de cartões                      */
+  --color-surface-alt: #f6f8fc; /* fundo de seção alternada                   */
+
+  /* ---- Papéis semânticos ------------------------------------------------- */
+  --bg-page: var(--color-white);
+  --bg-inverse: var(--color-navy);
+  --text-body: var(--color-ink);
+  --text-heading: var(--color-navy);
+  --text-on-dark: var(--color-white);
+  --text-on-dark-soft: #c4cee6;
+  --accent: var(--color-yellow);
+  --focus-ring: #3d6bff;
+
+  /* ---- Tipografia -------------------------------------------------------- */
+  --font-display: "Roboto Slab", "Times New Roman", serif; /* títulos/logo    */
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* Escala tipográfica fluida (clamp: mínimo, preferido, máximo) */
+  --fs-xs: 0.78rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.075rem;
+  --fs-lg: clamp(1.15rem, 1.05rem + 0.5vw, 1.375rem);
+  --fs-xl: clamp(1.4rem, 1.2rem + 1vw, 1.85rem);
+  --fs-2xl: clamp(1.8rem, 1.4rem + 2vw, 2.6rem);
+  --fs-3xl: clamp(2.3rem, 1.7rem + 3vw, 3.6rem);
+  --fs-4xl: clamp(2.8rem, 1.9rem + 4.4vw, 4.75rem);
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.25;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.75;
+
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.02em;
+  --ls-caps: 0.14em;   /* rótulos em caixa alta */
+
+  /* ---- Espaçamento (escala de 4px) --------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* Ritmo vertical entre seções */
+  --section-y: clamp(3.5rem, 2.2rem + 6vw, 7rem);
+  --section-y-tight: clamp(2.5rem, 1.8rem + 3.5vw, 4.5rem);
+
+  /* ---- Layout ------------------------------------------------------------ */
+  --container-max: 1200px;
+  --container-narrow: 780px;
+  --container-wide: 1360px;
+  --gutter: clamp(1.15rem, 0.6rem + 2.5vw, 2.75rem);
+  --header-h: 76px;
+
+  /* ---- Raios ------------------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Sombras (suaves, com tom azulado) --------------------------------- */
+  --shadow-xs: 0 1px 2px rgba(10, 37, 64, 0.06);
+  --shadow-sm: 0 4px 14px rgba(10, 37, 64, 0.07);
+  --shadow-md: 0 14px 34px rgba(10, 37, 64, 0.10);
+  --shadow-lg: 0 26px 60px rgba(10, 37, 64, 0.16);
+  --shadow-focus: 0 0 0 3px rgba(61, 107, 255, 0.35);
+
+  /* ---- Movimento --------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur-base: 260ms;
+  --dur-slow: 520ms;
+  --dur-reveal: 720ms;
+
+  /* ---- Camadas (z-index) ------------------------------------------------- */
+  --z-header: 100;
+  --z-menu: 120;
+  --z-overlay: 110;
+  --z-top: 200;
+}

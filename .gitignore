@@ -1,0 +1,15 @@
+# Dependências (não há build; caso adicione ferramentas depois)
+node_modules/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log

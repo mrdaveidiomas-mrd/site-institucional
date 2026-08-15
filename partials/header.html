@@ -1,0 +1,41 @@
+<!--
+  Cabeçalho do site — arquivo único reutilizado em todas as páginas.
+  Injetado via /assets/js/includes.js no elemento #site-header.
+  Para editar o menu ou o CTA, altere apenas este arquivo.
+-->
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="/" aria-label="Mr. Dave Idiomas — página inicial">
+        <img src="/assets/logos/wordmark-navy.png" alt="Mr. Dave Idiomas" width="838" height="242" />
+      </a>
+
+      <button
+        class="nav__toggle"
+        id="navToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="navPanel"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__panel" id="navPanel">
+        <ul class="nav__menu" role="list">
+          <li><a class="nav__link" href="/" data-nav="home">Home</a></li>
+          <li><a class="nav__link" href="/quem-somos/" data-nav="quem-somos">Quem somos</a></li>
+          <li><a class="nav__link" href="/cursos/" data-nav="cursos">Cursos</a></li>
+          <li><a class="nav__link" href="/metodologia/" data-nav="metodologia">Metodologia</a></li>
+          <li><a class="nav__link" href="/contato/" data-nav="contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--primary nav__cta" href="/contato/">Aula experimental</a>
+      </div>
+
+      <div class="nav__actions nav__actions--desktop">
+        <a class="btn btn--primary nav__cta" href="/contato/">Aula experimental</a>
+      </div>
+    </nav>
+  </div>
+</header>
