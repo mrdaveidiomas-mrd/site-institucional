@@ -39,7 +39,7 @@
   --focus-ring: #3d6bff;
 
   /* ---- Tipografia -------------------------------------------------------- */
-  --font-display: "Roboto Slab", "Times New Roman", serif; /* títulos/logo    */
+  --font-display: "Lulo clean", sans-serif; /* títulos/logo    */
   --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 
   --fw-regular: 400;

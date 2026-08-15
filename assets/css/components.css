@@ -906,7 +906,7 @@ body.menu-open {
 }
 
 .chip--yellow {
-  background: var(--color-yellow-100);
+  background: var(--color-yellow);
 }
 
 /* ---- Botão flutuante de WhatsApp -------------------------------------- */
