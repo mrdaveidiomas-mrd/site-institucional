@@ -149,9 +149,13 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-5);
   block-size: var(--header-h);
+}
+.brand{
+  display: flex;
+  justify-content: flex-start;
 }
 
 .brand {
@@ -325,6 +329,11 @@
 }
 
 @media (min-width: 901px) {
+  /* Logo à esquerda; menu + CTA agrupados à direita (não centralizados) */
+  .nav__panel {
+    margin-inline-start: auto;
+  }
+
   .nav__panel .nav__cta {
     display: none;
   }
