@@ -660,6 +660,50 @@
   color: var(--color-yellow-600);
 }
 
+/* Formulário em destaque: fundo azul marinho */
+.contact-form-card {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  box-shadow: var(--shadow-lg);
+  padding: clamp(1.5rem, 1rem + 2vw, 2.75rem);
+}
+
+.contact-form-card .field__label {
+  color: var(--color-white);
+}
+
+.contact-form-card .field__hint {
+  color: var(--text-on-dark-soft);
+}
+
+.contact-form-card .req {
+  color: #ff8a80;
+}
+
+.contact-form-card .field__error {
+  color: #ffb4ab;
+}
+
+.contact-form-card .form-success h3 {
+  color: var(--color-white);
+}
+
+.contact-form-card .form-success p {
+  color: var(--text-on-dark-soft);
+}
+
+/* Quadro "O que acontece depois": azul mais escuro que o formulário,
+   para não se equiparar ao destaque do formulário. */
+.contact-next {
+  background: var(--color-navy-deep);
+  border-color: var(--color-navy-deep);
+  color: var(--text-on-dark);
+}
+
+.contact-next h3 {
+  color: var(--color-white);
+}
+
 @media (max-width: 900px) {
   .contact-layout {
     grid-template-columns: 1fr;
