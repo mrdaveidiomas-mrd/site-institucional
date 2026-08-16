@@ -364,8 +364,12 @@
   margin-top: 2px;
 }
 
-/* ---- Foto emoldurada (com detalhe amarelo) ---------------------------- */
+/* ---- Foto emoldurada (com detalhe amarelo e legenda) ------------------ */
 .photo-frame {
+  margin: 0;
+}
+
+.photo-frame__media {
   position: relative;
   isolation: isolate;
 }
@@ -384,7 +388,6 @@
 .photo-frame__img {
   position: relative;
   z-index: 1;
-  margin: 0;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -403,6 +406,30 @@
   block-size: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+}
+
+.photo-frame__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: var(--space-5);
+  padding-inline-start: var(--space-4);
+  border-inline-start: 3px solid var(--color-yellow);
+}
+
+.photo-frame__name {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  color: var(--color-navy);
+  line-height: var(--lh-snug);
+}
+
+.photo-frame__role {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  color: var(--color-ink-soft);
 }
 
 /* ---- Cabeçalho de página interna ---------------------------------------
