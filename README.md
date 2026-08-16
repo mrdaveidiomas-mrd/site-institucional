@@ -80,3 +80,42 @@ Feito isso, o `assets/js/form.js` passa a enviar os dados automaticamente.
 
 Campos capturados: nome, e-mail, telefone/WhatsApp, idioma de interesse, nível
 atual, objetivo e uma observação opcional.
+
+## SEO e leitura por IAs (LLMs)
+
+O site já vem preparado para ser encontrado no Google e lido por assistentes de
+IA (ChatGPT, Gemini, Claude, Perplexity, Copilot).
+
+Arquivos e recursos configurados:
+
+- **`robots.txt`** — libera a indexação e autoriza explicitamente os crawlers de
+  IA (GPTBot, OAI-SearchBot, ChatGPT-User, Google-Extended, ClaudeBot,
+  PerplexityBot, bingbot, Applebot, CCBot) e aponta o sitemap.
+- **`sitemap.xml`** — lista as 5 páginas do site.
+- **`llms.txt`** — resumo do site em texto/markdown, no padrão llmstxt.org, para
+  os modelos entenderem rapidamente o que a escola oferece.
+- **Meta tags por página** — `title`, `description`, `canonical`, `robots`,
+  Open Graph e Twitter Card.
+- **Imagem de compartilhamento** — `assets/img/og-image.png` (1200×630), usada
+  em links no WhatsApp, redes sociais e resultados.
+- **Dados estruturados (Schema.org / JSON-LD)** — organização educacional,
+  site, planos e valores, FAQ (home), lista de cursos (cursos), página sobre e
+  fundador (quem somos) e página de contato.
+
+### Domínio (importante ao trocar)
+
+Todas as URLs absolutas de SEO usam **`https://mrdaveidiomas.com.br`**. Se o
+domínio mudar, faça um "localizar e substituir" desse endereço nestes arquivos:
+
+- `robots.txt`, `sitemap.xml`, `llms.txt`
+- o `<head>` de cada página (`index.html`, `cursos/`, `metodologia/`,
+  `quem-somos/`, `contato/`) — tags `canonical`, `og:url`, `twitter` e os blocos
+  `application/ld+json`.
+
+### Depois de publicar
+
+1. Cadastre o site no **Google Search Console** (google.com/search-console) e
+   confirme a propriedade do domínio.
+2. Em *Sitemaps*, envie `https://mrdaveidiomas.com.br/sitemap.xml`.
+3. Opcional: valide os dados estruturados em
+   *search.google.com/test/rich-results*.

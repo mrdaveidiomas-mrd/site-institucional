@@ -1,0 +1,51 @@
+# robots.txt — Mr. Dave Idiomas
+# Permite a indexação por buscadores e por crawlers de IA (busca e assistentes).
+
+User-agent: *
+Allow: /
+
+# --- Crawlers de IA / LLMs explicitamente permitidos --------------------
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google (busca generativa / Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft Copilot / Bing
+User-agent: bingbot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (usado por vários modelos)
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://mrdaveidiomas.com.br/sitemap.xml

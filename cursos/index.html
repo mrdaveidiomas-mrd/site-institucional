@@ -6,14 +6,31 @@
   <title>Cursos de inglês e espanhol — Mr. Dave Idiomas</title>
   <meta name="description" content="Cursos de inglês e espanhol para iniciantes e conversação, além do English for Latin Americans — inglês para quem fala espanhol. Encontre o curso certo para você." />
 
-  <link rel="icon" href="/assets/logos/favicon.png" type="image/svg+xml" />
+  <link rel="canonical" href="https://mrdaveidiomas.com.br/cursos/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="Mr. Dave Idiomas" />
+  <meta name="keywords" content="curso de inglês, curso de espanhol, inglês para iniciantes, inglês para conversação, espanhol para iniciantes, English for Latin Americans, aulas online ao vivo" />
+
+  <link rel="icon" href="/assets/logos/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/logos/mr-dave-tile.png" />
   <meta name="theme-color" content="#002365" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Cursos — Mr. Dave Idiomas" />
-  <meta property="og:description" content="Inglês e espanhol para diferentes níveis e objetivos." />
-  <meta property="og:image" content="/assets/logos/mr-dave-tile.png" />
+  <meta property="og:site_name" content="Mr. Dave Idiomas" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://mrdaveidiomas.com.br/cursos/" />
+  <meta property="og:title" content="Cursos de inglês e espanhol — Mr. Dave Idiomas" />
+  <meta property="og:description" content="Inglês e espanhol para iniciantes e conversação, e o English for Latin Americans — inglês para quem fala espanhol." />
+  <meta property="og:image" content="https://mrdaveidiomas.com.br/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cursos de inglês e espanhol — Mr. Dave Idiomas" />
+  <meta name="twitter:description" content="Inglês e espanhol para iniciantes e conversação, e o English for Latin Americans." />
+  <meta name="twitter:image" content="https://mrdaveidiomas.com.br/assets/img/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +40,71 @@
   <link rel="stylesheet" href="/assets/css/base.css" />
   <link rel="stylesheet" href="/assets/css/components.css" />
   <link rel="stylesheet" href="/assets/css/pages.css" />
+
+  <!-- Dados estruturados (Schema.org) — trilha e catálogo de cursos -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://mrdaveidiomas.com.br/#organization",
+        "name": "Mr. Dave Idiomas",
+        "url": "https://mrdaveidiomas.com.br/",
+        "logo": "https://mrdaveidiomas.com.br/assets/logos/logo.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mrdaveidiomas.com.br/" },
+          { "@type": "ListItem", "position": 2, "name": "Cursos", "item": "https://mrdaveidiomas.com.br/cursos/" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Cursos de inglês e espanhol",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": "Inglês (iniciantes e conversação)",
+            "description": "Cursos de inglês do primeiro contato à conversação, para iniciantes e para quem já estudou e quer desenvolver a comunicação.",
+            "inLanguage": "en",
+            "provider": { "@id": "https://mrdaveidiomas.com.br/#organization" },
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online",
+              "courseWorkload": "PT1H"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Espanhol (iniciantes e conversação)",
+            "description": "Cursos de espanhol de forma gradual e prática, para iniciantes e para quem quer mais segurança ao se comunicar.",
+            "inLanguage": "es",
+            "provider": { "@id": "https://mrdaveidiomas.com.br/#organization" },
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online",
+              "courseWorkload": "PT1H"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "English for Latin Americans",
+            "description": "Inglês para falantes de espanhol da América Latina, usando o espanhol como língua de apoio nas explicações.",
+            "inLanguage": "en",
+            "provider": { "@id": "https://mrdaveidiomas.com.br/#organization" },
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online",
+              "courseWorkload": "PT1H"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-page="cursos">
   <div id="site-header"></div>
