@@ -537,6 +537,44 @@ body.menu-open {
   margin-bottom: var(--space-3);
 }
 
+/* Limita o texto a algumas linhas; o botão "Ler mais" expande (via JS) */
+.testimonial__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
+
+.testimonial__text.is-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.testimonial__more {
+  align-self: flex-start;
+  margin-top: calc(var(--space-2) - var(--space-5));
+  padding: 0;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid var(--color-yellow);
+  font: inherit;
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--color-navy);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.testimonial__more:hover {
+  color: var(--color-yellow-600);
+}
+
+.testimonial__more[hidden] {
+  display: none;
+}
+
 .testimonial__person {
   display: flex;
   align-items: center;

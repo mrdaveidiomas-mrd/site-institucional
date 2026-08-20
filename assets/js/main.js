@@ -70,8 +70,45 @@ function initFaq() {
   });
 }
 
+/* ---- Depoimentos: inicial do avatar + "Ler mais" ---------------------- */
+function initTestimonials() {
+  const items = document.querySelectorAll(".testimonial");
+  if (!items.length) return;
+
+  const setup = () => {
+    items.forEach((t) => {
+      // Gera a inicial do avatar a partir do nome (evita desalinho manual)
+      const name = t.querySelector(".testimonial__name")?.textContent.trim();
+      const avatar = t.querySelector(".testimonial__avatar");
+      if (name && avatar) avatar.textContent = name.charAt(0).toUpperCase();
+
+      // Mostra "Ler mais" apenas quando o texto excede o limite de linhas
+      const text = t.querySelector(".testimonial__text");
+      const btn = t.querySelector(".testimonial__more");
+      if (!text || !btn) return;
+
+      if (text.scrollHeight - text.clientHeight > 4) {
+        btn.hidden = false;
+        btn.addEventListener("click", () => {
+          const expanded = text.classList.toggle("is-expanded");
+          btn.textContent = expanded ? "Ler menos" : "Ler mais";
+          btn.setAttribute("aria-expanded", String(expanded));
+        });
+      }
+    });
+  };
+
+  // Aguarda as fontes carregarem para medir a altura corretamente
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(setup);
+  } else {
+    setup();
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   applyStagger();
   initReveal();
   initFaq();
+  initTestimonials();
 });
