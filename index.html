@@ -37,10 +37,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260820" />
-  <link rel="stylesheet" href="/assets/css/base.css?v=20260820" />
-  <link rel="stylesheet" href="/assets/css/components.css?v=20260820" />
-  <link rel="stylesheet" href="/assets/css/pages.css?v=20260820" />
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260821" />
+  <link rel="stylesheet" href="/assets/css/base.css?v=20260821" />
+  <link rel="stylesheet" href="/assets/css/components.css?v=20260821" />
+  <link rel="stylesheet" href="/assets/css/pages.css?v=20260821" />
 
   <!-- Dados estruturados (Schema.org) — organização, site, planos e FAQ -->
   <script type="application/ld+json">
@@ -301,6 +301,66 @@
       </div>
     </section>
 
+    <!-- ================= PORTAL DO ALUNO ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <div class="split__body" data-reveal>
+            <p class="eyebrow">Portal do Aluno</p>
+            <h2>Seu aprendizado continua fora da sala de aula</h2>
+            <div class="stack" style="--flow: var(--space-4); margin-top: var(--space-5);">
+              <p style="color: var(--color-ink-soft); line-height: var(--lh-relaxed);">
+                Todo aluno tem acesso a uma área exclusiva para revisar os conteúdos
+                das aulas, praticar com atividades e acompanhar a própria evolução —
+                tudo reunido em um só lugar.
+              </p>
+            </div>
+            <a class="arrow-link" href="/portal/" style="margin-top: var(--space-6);">
+              Conheça o Portal do Aluno
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="split__media" data-reveal data-reveal-delay="120">
+            <div class="portal-mock" aria-hidden="true">
+              <div class="portal-mock__bar">
+                <div class="portal-mock__dots"><span></span><span></span><span></span></div>
+                <span class="portal-mock__url">portaldoaluno.mrdaveidiomas.com.br</span>
+              </div>
+              <div class="portal-mock__body">
+                <div class="portal-mock__greet">
+                  <span class="portal-mock__avatar">A</span>
+                  <div>
+                    <strong>Olá, Ana!</strong>
+                    <span class="portal-mock__sub">Bom te ver de novo</span>
+                  </div>
+                </div>
+                <div class="portal-mock__progress">
+                  <div class="portal-mock__progress-head">
+                    <span>Seu progresso</span>
+                    <span class="portal-mock__level">Inglês · A2</span>
+                  </div>
+                  <div class="progress-bar"><span style="width: 68%;"></span></div>
+                  <span class="portal-mock__pct">68% do módulo concluído</span>
+                </div>
+                <div class="portal-mock__row">
+                  <span class="portal-mock__ic portal-mock__ic--done">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  </span>
+                  <div><strong>Aula 12 — Present Perfect</strong><span class="portal-mock__sub">Concluída</span></div>
+                </div>
+                <div class="portal-mock__row">
+                  <span class="portal-mock__ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                  </span>
+                  <div><strong>Atividade — Vocabulário</strong><span class="portal-mock__sub">A fazer</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= CURSOS ================= -->
     <section class="section">
       <div class="container">
@@ -385,7 +445,7 @@
           </p>
         </div>
 
-        <div class="grid grid--4" data-reveal-stagger="90">
+        <div class="grid grid--auto" data-reveal-stagger="90">
           <div class="card feature card--hover card--on-dark" data-reveal>
             <span class="icon-badge icon-badge--on-dark" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -413,6 +473,13 @@
             </span>
             <h3 class="feature__title">Acompanhamento próximo</h3>
             <p class="card__text">Respeitamos o seu ritmo sem perder de vista a evolução.</p>
+          </div>
+          <div class="card feature card--hover card--on-dark" data-reveal>
+            <span class="icon-badge icon-badge--on-dark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+            </span>
+            <h3 class="feature__title">Portal do Aluno</h3>
+            <p class="card__text">Área exclusiva para revisar conteúdos, praticar e acompanhar sua evolução.</p>
           </div>
         </div>
 
@@ -679,7 +746,7 @@
 
   <div id="site-footer"></div>
 
-  <script src="/assets/js/includes.js?v=20260820"></script>
-  <script src="/assets/js/main.js?v=20260820"></script>
+  <script src="/assets/js/includes.js?v=20260821"></script>
+  <script src="/assets/js/main.js?v=20260821"></script>
 </body>
 </html>
