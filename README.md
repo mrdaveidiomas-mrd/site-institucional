@@ -81,6 +81,23 @@ Feito isso, o `assets/js/form.js` passa a enviar os dados automaticamente.
 Campos capturados: nome, e-mail, telefone/WhatsApp, idioma de interesse, nível
 atual, objetivo e uma observação opcional.
 
+## Cache dos arquivos CSS/JS (importante)
+
+O GitHub Pages guarda os arquivos estáticos no cache do navegador por ~10 min.
+Para que uma mudança em CSS/JS apareça na hora (sem o visitante precisar limpar
+o cache), os links usam um parâmetro de versão, ex.:
+
+```html
+<link rel="stylesheet" href="/assets/css/pages.css?v=20260820" />
+<script src="/assets/js/includes.js?v=20260820"></script>
+```
+
+**Sempre que editar qualquer arquivo em `assets/css/` ou `assets/js/`**, troque
+o número `?v=...` (uma data no formato AAAAMMDD funciona bem) em **todas as
+páginas** — assim o navegador baixa a versão nova imediatamente. Os parciais
+(`header.html`/`footer.html`) não precisam disso: já são carregados com
+revalidação (`cache: "no-cache"`).
+
 ## SEO e leitura por IAs (LLMs)
 
 O site já vem preparado para ser encontrado no Google e lido por assistentes de
