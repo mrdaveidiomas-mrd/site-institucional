@@ -452,9 +452,40 @@ body.menu-open {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* Grade fluida: distribui os cartões conforme o espaço (bom para 5+ itens) */
-.grid--auto {
-  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+/* Grade de diferenciais: 3 na primeira linha e 2 centralizados na segunda,
+   todos com a mesma largura (grade de 6 colunas, cada card ocupa 2). */
+.features-grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.features-grid > * {
+  grid-column: span 2;
+}
+
+.features-grid > *:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.features-grid > *:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid > *,
+  .features-grid > *:nth-child(4),
+  .features-grid > *:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {
