@@ -24,6 +24,7 @@ Todas as aulas são online e ao vivo. Há aula experimental mediante agendamento
 - [Quem somos](https://mrdaveidiomas.com.br/quem-somos/): missão, valores e história da escola.
 - [Cursos](https://mrdaveidiomas.com.br/cursos/): detalhes de inglês, espanhol e English for Latin Americans.
 - [Metodologia](https://mrdaveidiomas.com.br/metodologia/): como funciona o método "aprender para usar".
+- [Portal do Aluno](https://mrdaveidiomas.com.br/portal/): ambiente online exclusivo dos alunos, com conteúdos das aulas, acompanhamento de progresso e atividades. Acesso em https://portaldoaluno.mrdaveidiomas.com.br/login
 - [Contato](https://mrdaveidiomas.com.br/contato/): formulário de aula experimental e canais diretos.
 
 ## Contato
